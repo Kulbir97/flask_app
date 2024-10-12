@@ -1,0 +1,9 @@
+body {
+    background-color: rgba(145, 50, 9, 0.785); /* Sets the background color to red for all pages */
+    color: white; /* Optional: Sets the text color to white for better contrast */
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold; /* Make navigation links bold */
+    color: red; /* Set navigation links color to red */
+}
