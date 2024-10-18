@@ -9,6 +9,10 @@ load_dotenv()  # This will read the .env file and load the variables into the en
 # Initialize Flask app
 app = Flask(__name__)
 
+# Access environment variables for MongoDB connection
+MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')  # Retrieve username from environment variable
+MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')  # Retrieve password from environment variable
+
 # MongoDB Atlas connection
 client = MongoClient("mongodb+srv://Kulbir:data23@cluster0.iwhul.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
@@ -26,3 +30,11 @@ def products():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
+    
+    
+    
+
+
+
