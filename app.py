@@ -1,5 +1,10 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
+from dotenv import load_dotenv  # Import load_dotenv to load environment variables
+import os  # Import os module to access environment variables
+
+# Load environment variables from the .env file
+load_dotenv()  # This will read the .env file and load the variables into the environment
 
 # Initialize Flask app
 app = Flask(__name__)
