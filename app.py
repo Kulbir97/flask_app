@@ -1,17 +1,17 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
 from dotenv import load_dotenv  # Import load_dotenv to load environment variables
-import os  # Import os module to access environment variables
+import os   # Import os module to access environment variables
 
 # Load environment variables from the .env file
 load_dotenv()  # This will read the .env file and load the variables into the environment
 
+# Access environment variables for MongoDB connection
+MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')    # Retrieve username from environment variable
+MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')    # Retrieve password from environment variable
+
 # Initialize Flask app
 app = Flask(__name__)
-
-# Access environment variables for MongoDB connection
-MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')  # Retrieve username from environment variable
-MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')  # Retrieve password from environment variable
 
 # MongoDB Atlas connection
 client = MongoClient("mongodb+srv://Kulbir:data23@cluster0.iwhul.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
